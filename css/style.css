@@ -1,0 +1,166 @@
+body {
+  background-color: black;
+  margin:0;
+  color:white;
+}
+
+.div {
+  width:3vw;
+  height:3vw;
+  transition:all 2s ease;
+  border-left:1px solid #CCFFFF;
+  border-top:1px solid #CCFFFF;
+  opacity:.3;
+  float: left;
+}
+
+.div:hover{
+  background-color:white;
+  transition:all 0s ease;
+}
+
+.active{
+  background-image:url(../img/bichito.gif);
+  opacity:.3;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+  content:"";
+  display:table;
+}
+.group:after {
+  clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+/*  GRID OF THREE  */
+.span_3_of_3 {
+  width: 100%;
+}
+.span_2_of_3 {
+  width: 66.1%;
+}
+.span_1_of_3 {
+  width: 32.2%;
+}
+
+.span_1_of_4 {
+  width: 23.1%;
+  text-align: center;
+  height: 300px;
+}
+
+.pause {
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+.lead {
+  background-image:url(../img/rock/1.jpg);
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+.bass {
+  background-image:url(../img/rock/bass1.jpg);
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+
+.drum {
+  background-image:url(../img/rock/drum1.jpg);
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+.rhythm {
+  background-image:url(../img/rock/5.jpg);
+  background-attachment:fixed;
+  background-position:center; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+  .col { 
+    margin: 1% 0 1% 0%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .span_3_of_3 {
+    width: 100%; 
+  }
+  .span_2_of_3 {
+    width: 100%; 
+  }
+  .span_1_of_3 {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+  canvas { 
+    display: inline-block; 
+    background: #202020; 
+    width: 95%;
+    height: 45%;
+    box-shadow: 0px 0px 10px blue;
+  }
+  #controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 20%;
+    width: 100%;
+  }
+  #record { height: 15vh; }
+  #record.recording { 
+    background: red;
+    background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+    background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+    background: radial-gradient(center, ellipse cover, #ff0000 0%,lightgrey 75%,lightgrey 100%,#7db9e8 100%); 
+  }
+  #save, #save img { height: 10vh; }
+  #save { opacity: 0.25;}
+  #save[download] { opacity: 1;}
+  #viz {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  @media (orientation: landscape) {
+    body { flex-direction: row;}
+    #controls { flex-direction: column; height: 100%; width: 10%;}
+    #viz { height: 100%; width: 90%;}
+  }
