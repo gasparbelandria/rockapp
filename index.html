@@ -23,7 +23,58 @@ div#mp3_player > canvas{ width:500px; height:30px; background:#002D3C; float:lef
 
 <script type="text/javascript">
 $(function(){	
-	
+	/*************************************** Rock Drum
+		Setting Rock Drum
+	*/
+	var rockDrum = ['rock/Drums/EMOK1Beat86-01.mp3','rock/Drums/EMOK1Beat86-02.mp3','rock/Drums/EMOK1Beat86-03.mp3','rock/Drums/EMOK1Beat86-04.mp3','rock/Drums/EMOK1Beat86-05.mp3','rock/Drums/EMOK1Beat86-06.mp3','rock/Drums/EMOK1Beat86-07.mp3','rock/Drums/EMOK1Beat86-08.mp3','rock/Drums/EMOK1Beat86-09.mp3','rock/Drums/EMOK1Beat86-10.mp3'];
+	var row = '<div class="div" id="drumsDel" style="background-color:#3C0">stop</div>';
+	$.each(rockDrum, function( index, value ) {
+		var item = eval(index)+1;
+		row+='<div class="div" id="drums'+item+'" data="'+value+'" style="background-color:#3C0;opacity:.2"></div>';
+	  console.log( index + ": " + value );
+	})
+	$('#rockDrumContainer').append(row);
+
+	/*************************************** Rock Bass
+		Setting Rock Bass
+	*/
+	var rockBass = ['rock/Bass/EMOK1Bass86E-01.mp3','rock/Bass/EMOK1Bass86E-02.mp3','rock/Bass/EMOK1Bass86E-03.mp3','rock/Bass/EMOK1Bass86E-04.mp3','rock/Bass/EMOK1Bass86E-05.mp3','rock/Bass/EMOK1Bass86E-06.mp3','rock/Bass/EMOK1Bass86E-07.mp3','rock/Bass/EMOK1Bass86E-08.mp3','rock/Bass/EMOK1Bass86E-09.mp3','rock/Bass/EMOK1Bass86E-10.mp3'];
+	var row = '<div class="div" id="bassDel" style="background-color:#A02">stop</div>';
+	$.each(rockBass, function( index, value ) {
+		var item = eval(index)+1;
+		row+='<div class="div" id="bass'+item+'" data="'+value+'" style="background-color:#A02;opacity:.2"></div>';
+	  console.log( index + ": " + value );
+	})
+	$('#rockBassContainer').append(row);
+
+	/*************************************** Rock Lead
+		Setting Rock Lead
+	*/
+	var rockLead = ['rock/LeadGuitar/EMOK1LeadGuit86E-01.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-02.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-03.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-04.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-05.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-06.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-07.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-08.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-09.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-10.mp3'];
+	var row = '<div class="div" id="leadguitarDel" style="background-color:#FA4">stop</div>';
+	$.each(rockLead, function( index, value ) {
+		var item = eval(index)+1;
+		row+='<div class="div" id="leadguitar'+item+'" data="'+value+'" style="background-color:#FA4;opacity:.2"></div>';
+	  console.log( index + ": " + value );
+	})
+	$('#rockLeadContainer').append(row);
+
+	/*************************************** Rock Rhythm
+		Setting Rock Rhythm
+	*/
+	var rockRhythm = ['rock/RhythmGuitar/EMOK1RhyGuitA86E-01.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-02.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-03.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-04.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-05.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-06.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-07.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-08.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-09.mp3','rock/RhythmGuitar/EMOK1RhyGuitAt86E-10.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-01.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-02.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-03.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-04.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-05.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-06.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-07.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-08.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-09.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-10.mp3'];
+	var row = '<div class="div pause" id="rhythmguitarDel" style="background-color:#F0C;">stop</div>';
+	$.each(rockRhythm, function( index, value ) {
+		var item = eval(index)+1;
+		row+='<div class="div" id="rhythmguitar'+item+'" data="'+value+'" style="background-color:#F0C;opacity:.2"></div>';
+	  console.log( index + ": " + value );
+	})
+	$('#rockRhythmContainer').append(row);
+
+	/*
+		Handlers Sounds
+	*/
+
 	$('div').live('click', function(){
 		//this.beat = $('#'+this.id).attr('data');
 	});
@@ -181,16 +232,16 @@ $(function(){
 		case 'rhythmguitar8': rhythmguitar8.play(); console.log('playing rhythmguitar8'); break;
 		case 'rhythmguitar9': rhythmguitar9.play(); console.log('playing rhythmguitar9'); break;
 		case 'rhythmguitar10': rhythmguitar10.play(); console.log('playing rhythmguitar10'); break;
-		case 'rhythmguitar11': rhythmguitar10.play(); console.log('playing rhythmguitar11'); break;
-		case 'rhythmguitar12': rhythmguitar10.play(); console.log('playing rhythmguitar12'); break;
-		case 'rhythmguitar13': rhythmguitar10.play(); console.log('playing rhythmguitar13'); break;
-		case 'rhythmguitar14': rhythmguitar10.play(); console.log('playing rhythmguitar14'); break;
-		case 'rhythmguitar15': rhythmguitar10.play(); console.log('playing rhythmguitar15'); break;
-		case 'rhythmguitar16': rhythmguitar10.play(); console.log('playing rhythmguitar16'); break;
-		case 'rhythmguitar17': rhythmguitar10.play(); console.log('playing rhythmguitar17'); break;
-		case 'rhythmguitar18': rhythmguitar10.play(); console.log('playing rhythmguitar18'); break;
-		case 'rhythmguitar19': rhythmguitar10.play(); console.log('playing rhythmguitar19'); break;
-		case 'rhythmguitar20': rhythmguitar10.play(); console.log('playing rhythmguitar20'); break;
+		case 'rhythmguitar11': rhythmguitar11.play(); console.log('playing rhythmguitar11'); break;
+		case 'rhythmguitar12': rhythmguitar12.play(); console.log('playing rhythmguitar12'); break;
+		case 'rhythmguitar13': rhythmguitar13.play(); console.log('playing rhythmguitar13'); break;
+		case 'rhythmguitar14': rhythmguitar14.play(); console.log('playing rhythmguitar14'); break;
+		case 'rhythmguitar15': rhythmguitar15.play(); console.log('playing rhythmguitar15'); break;
+		case 'rhythmguitar16': rhythmguitar16.play(); console.log('playing rhythmguitar16'); break;
+		case 'rhythmguitar17': rhythmguitar17.play(); console.log('playing rhythmguitar17'); break;
+		case 'rhythmguitar18': rhythmguitar18.play(); console.log('playing rhythmguitar18'); break;
+		case 'rhythmguitar19': rhythmguitar19.play(); console.log('playing rhythmguitar19'); break;
+		case 'rhythmguitar20': rhythmguitar20.play(); console.log('playing rhythmguitar20'); break;
 		}			
 	}
 
@@ -327,80 +378,10 @@ var rhythmguitar20 = new Howl({urls: ['rock/RhythmGuitar/EMOK1RhyGuitB86E-10.wav
 -->
 
 <div class="section group">
-	<div class="col span_1_of_4 drum">
-		<div class="div" id="drumsDel" style="background-color:#3C0">stop</div>
-		<div class="div" id="drums1" data="rock/Drums/EMOK1Beat86-01.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums2" data="rock/Drums/EMOK1Beat86-02.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums3" data="rock/Drums/EMOK1Beat86-03.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums4" data="rock/Drums/EMOK1Beat86-04.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums5" data="rock/Drums/EMOK1Beat86-05.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums6" data="rock/Drums/EMOK1Beat86-06.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums7" data="rock/Drums/EMOK1Beat86-07.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums8" data="rock/Drums/EMOK1Beat86-08.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums9" data="rock/Drums/EMOK1Beat86-09.mp3" style="background-color:#3C0;opacity:.2"></div>
-		<div class="div" id="drums10" data="rock/Drums/EMOK1Beat86-10.mp3" style="background-color:#3C0;opacity:.2"></div>
-
-	</div>
-	<div class="col span_1_of_4 bass">
-
-
-		<div class="div" id="bassDel" style="background-color:#A02">stop</div>
-		<div class="div" id="bass1" data="rock/Bass/EMOK1Bass86E-01.mp3" data-bass="1" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass2" data="rock/Bass/EMOK1Bass86E-02.mp3" data-bass="2" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass3" data="rock/Bass/EMOK1Bass86E-03.mp3" data-bass="3" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass4" data="rock/Bass/EMOK1Bass86E-04.mp3" data-bass="4" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass5" data="rock/Bass/EMOK1Bass86E-05.mp3" data-bass="5" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass6" data="rock/Bass/EMOK1Bass86E-06.mp3" data-bass="6" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass7" data="rock/Bass/EMOK1Bass86E-07.mp3" data-bass="7" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass8" data="rock/Bass/EMOK1Bass86E-08.mp3" data-bass="8" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass9" data="rock/Bass/EMOK1Bass86E-09.mp3" data-bass="9" style="background-color:#A02; opacity:.2"></div>
-		<div class="div" id="bass10" data="rock/Bass/EMOK1Bass86E-10.mp3" data-bass="10" style="background-color:#A02; opacity:.2"></div>
-
-
-	</div>
-	<div class="col span_1_of_4 lead">
-
-
-		<div class="div" id="leadguitarDel" style="background-color:#FA4">stop</div>
-		<div class="div" id="leadguitar1" data="rock/LeadGuitar/EMOK1LeadGuit86E-01.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar2" data="rock/LeadGuitar/EMOK1LeadGuit86E-02.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar3" data="rock/LeadGuitar/EMOK1LeadGuit86E-03.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar4" data="rock/LeadGuitar/EMOK1LeadGuit86E-04.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar5" data="rock/LeadGuitar/EMOK1LeadGuit86E-05.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar6" data="rock/LeadGuitar/EMOK1LeadGuit86E-06.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar7" data="rock/LeadGuitar/EMOK1LeadGuit86E-07.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar8" data="rock/LeadGuitar/EMOK1LeadGuit86E-08.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar9" data="rock/LeadGuitar/EMOK1LeadGuit86E-09.mp3" style="background-color:#FA4;opacity:.2"></div>
-		<div class="div" id="leadguitar10" data="rock/LeadGuitar/EMOK1LeadGuit86E-10.mp3" style="background-color:#FA4;opacity:.2"></div>
-
-
-	</div>
-	<div class="col span_1_of_4 rhythm">
-
-		<div class="div pause" id="rhythmguitarDel" style="background-color:#F0C;">stop</div>
-		<div class="div" id="rhythmguitar1" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-01.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar2" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-02.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar3" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-03.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar4" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-04.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar5" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-05.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar6" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-06.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar7" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-07.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar8" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-08.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar9" data="rock/RhythmGuitar/EMOK1RhyGuitA86E-09.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar10" data="rock/RhythmGuitar/EMOK1RhyGuitAt86E-10.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar11" data="rock/RhythmGuitar/EMOK1RhyGuitB6E-01.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar12" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-02.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar13" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-03.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar14" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-04.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar15" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-05.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar16" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-06.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar17" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-07.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar18" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-08.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar19" data="rock/RhythmGuitar/EMOK1RhyGuitB86E-09.mp3" style="background-color:#F0C;opacity:.2"></div>
-		<div class="div" id="rhythmguitar20" data="rock/RhythmGuitar/EMOK1RhyGuitBt86E-10.mp3" style="background-color:#F0C;opacity:.2"></div>
-
-
-	</div>
+	<div class="col span_1_of_4 drum" id="rockDrumContainer"></div>
+	<div class="col span_1_of_4 bass" id="rockBassContainer"></div>
+	<div class="col span_1_of_4 lead" id="rockLeadContainer"></div>
+	<div class="col span_1_of_4 rhythm" id="rockRhythmContainer"></div>
 </div>
 
 <div class="div"></div>
