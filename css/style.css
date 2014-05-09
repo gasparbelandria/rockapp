@@ -5,6 +5,7 @@ body {
 }
 
 .div {
+  /*
   width:3vw;
   height:3vw;
   transition:all 2s ease;
@@ -12,6 +13,25 @@ body {
   border-top:1px solid #CCFFFF;
   opacity:.3;
   float: left;
+  */
+
+  /*
+  width: 3vw;
+  height: 3vw;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+  background: #4679BD;  
+  margin: 0 auto;
+  */
+    width: 20%;
+    height:0;
+    padding-bottom: 20%;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
+    background: #4679BD;  
+    margin: 0 auto;
 }
 
 .div:hover{
@@ -76,26 +96,22 @@ body {
 }
 
 .lead {
-  background-image:url(../img/rock/1.jpg);
   background-attachment:fixed;
   background-position:center; 
 }
 
 .bass {
-  background-image:url(../img/rock/bass1.jpg);
   background-attachment:fixed;
   background-position:center; 
 }
 
 
 .drum {
-  background-image:url(../img/rock/drum1.jpg);
   background-attachment:fixed;
   background-position:center; 
 }
 
 .rhythm {
-  background-image:url(../img/rock/5.jpg);
   background-attachment:fixed;
   background-position:center; 
 }
