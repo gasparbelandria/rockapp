@@ -27,10 +27,11 @@ $(function(){
 		Setting Rock Drum
 	*/
 	var rockDrum = ['rock/Drums/EMOK1Beat86-01.mp3','rock/Drums/EMOK1Beat86-02.mp3','rock/Drums/EMOK1Beat86-03.mp3','rock/Drums/EMOK1Beat86-04.mp3','rock/Drums/EMOK1Beat86-05.mp3','rock/Drums/EMOK1Beat86-06.mp3','rock/Drums/EMOK1Beat86-07.mp3','rock/Drums/EMOK1Beat86-08.mp3','rock/Drums/EMOK1Beat86-09.mp3','rock/Drums/EMOK1Beat86-10.mp3'];
-	var row = '<div class="div" id="drumsDel" style="background-color:#3C0">stop</div>';
+	//var row = '<div class="div" id="drumsDel" style="background-color:#3C0">stop</div>';
+	var row = '<span class="toggle"><input type="checkbox"><label data-off="Stop" data-on="Play"></label></span>';
 	$.each(rockDrum, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div btn" id="drums'+item+'" data="'+value+'" style="background-color:#3C0;opacity:.2"></div>';
+		row+='<div class="div button tick" id="drums'+item+'" data="'+value+'" style="background-color:#3C0;opacity:.2"></div>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockDrumContainer').append(row);
@@ -39,10 +40,10 @@ $(function(){
 		Setting Rock Bass
 	*/
 	var rockBass = ['rock/Bass/EMOK1Bass86E-01.mp3','rock/Bass/EMOK1Bass86E-02.mp3','rock/Bass/EMOK1Bass86E-03.mp3','rock/Bass/EMOK1Bass86E-04.mp3','rock/Bass/EMOK1Bass86E-05.mp3','rock/Bass/EMOK1Bass86E-06.mp3','rock/Bass/EMOK1Bass86E-07.mp3','rock/Bass/EMOK1Bass86E-08.mp3','rock/Bass/EMOK1Bass86E-09.mp3','rock/Bass/EMOK1Bass86E-10.mp3'];
-	var row = '<div class="div" id="bassDel" style="background-color:#A02">stop</div>';
+	var row = '<div class="div button tick" id="bassDel" style="background-color:#A02">stop</div>';
 	$.each(rockBass, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div" id="bass'+item+'" data="'+value+'" style="background-color:#A02;opacity:.2"></div>';
+		row+='<div class="div button tick" id="bass'+item+'" data="'+value+'" style="background-color:#A02;opacity:.2"></div>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockBassContainer').append(row);
@@ -54,7 +55,7 @@ $(function(){
 	var row = '<div class="div" id="leadguitarDel" style="background-color:#FA4">stop</div>';
 	$.each(rockLead, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div" id="leadguitar'+item+'" data="'+value+'" style="background-color:#FA4;opacity:.2"></div>';
+		row+='<div class="div button tick" id="leadguitar'+item+'" data="'+value+'" style="background-color:#FA4;opacity:.2"></div>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockLeadContainer').append(row);
@@ -66,7 +67,7 @@ $(function(){
 	var row = '<div class="div pause" id="rhythmguitarDel" style="background-color:#F0C;">stop</div>';
 	$.each(rockRhythm, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div" id="rhythmguitar'+item+'" data="'+value+'" style="background-color:#F0C;opacity:.2"></div>';
+		row+='<div class="div button tick" id="rhythmguitar'+item+'" data="'+value+'" style="background-color:#F0C;opacity:.2"></div>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockRhythmContainer').append(row);
@@ -297,6 +298,48 @@ $(function(){
 	}
 
 
+	setTimeout(function() {
+	    var sound = new Howl({ urls: [
+	          "http://tagpro-pi.koalabeast.com/sounds/explosion.mp3",
+	          "http://tagpro-pi.koalabeast.com/sounds/explosion.m4a",
+	          "http://tagpro-pi.koalabeast.com/sounds/explosion.ogg"
+	    ]});
+	                          
+	    //sound.play();
+	    sound.volume(0.25);
+	});
+	/*
+	var soundId = "x";
+	var sound = new Howl({
+	  urls: ['rock/RhythmGuitar/EMOK1RhyGuitA86E-09.wav'],
+	  volume: .1,
+	  loop: true,
+	  id: soundId,
+	  sprite: {
+	    blast: [0, 1000],
+	    laser: [2000, 3000],
+	    winner: [4000, 7500],
+	    thor: [1000, 1500],
+	  },
+	});
+
+	setTimeout(function() {
+	                          
+	    //sound.play();
+	    sound.volume(0.25);
+	});
+
+
+	sound.play('thor');
+
+	$('#volume').change(function() {
+		console.log(sound)
+		sound.volume($(this).val(), soundId)
+		//sound.play('thor');
+	});
+*/
+
+
 });
 
 </script>
@@ -305,7 +348,7 @@ $(function(){
 
 </head>
 <body>
-
+<input id="volume" type="range" min="0" max="10" value="1">
 <!--
 <div id="mp3_player">
   <div id="audio_box"></div>
@@ -313,11 +356,11 @@ $(function(){
 </div>
 -->
 
-<div class="section group">
-	<div class="col span_1_of_4 drum" id="rockDrumContainer"></div>
-	<div class="col span_1_of_4 bass" id="rockBassContainer"></div>
-	<div class="col span_1_of_4 lead" id="rockLeadContainer"></div>
-	<div class="col span_1_of_4 rhythm" id="rockRhythmContainer"></div>
+<div class="section group buttonHolder">
+	<div class="col drum button tick" id="rockDrumContainer"></div>
+	<div class="col bass button cross" id="rockBassContainer"></div>
+	<div class="col lead button heart" id="rockLeadContainer"></div>
+	<div class="col rhythm button flower" id="rockRhythmContainer"></div>
 </div>
 
 <!--
