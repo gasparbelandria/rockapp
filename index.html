@@ -21,18 +21,33 @@ div#mp3_player > canvas{ width:500px; height:30px; background:#002D3C; float:lef
 <script src="js/main.js"></script>
 -->
 
+
+
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+
+
+
+
+
+
+
 <script type="text/javascript">
 $(function(){	
 	/*************************************** Rock Drum
 		Setting Rock Drum
 	*/
 	var rockDrum = ['rock/Drums/EMOK1Beat86-01.mp3','rock/Drums/EMOK1Beat86-02.mp3','rock/Drums/EMOK1Beat86-03.mp3','rock/Drums/EMOK1Beat86-04.mp3','rock/Drums/EMOK1Beat86-05.mp3','rock/Drums/EMOK1Beat86-06.mp3','rock/Drums/EMOK1Beat86-07.mp3','rock/Drums/EMOK1Beat86-08.mp3','rock/Drums/EMOK1Beat86-09.mp3','rock/Drums/EMOK1Beat86-10.mp3'];
-	//var row = '<div class="div" id="drumsDel" style="background-color:#3C0">stop</div>';
-	var row = '<span class="toggle"><input type="checkbox"><label data-off="Stop" data-on="Play"></label></span>';
+	var row = '<button class="btn btn-2 btn-2i" id="drumsDel">stop</button>';
+	//var row = '<span class="toggle"><input type="checkbox"><label data-off="Stop" data-on="Play"></label></span>';
 	$.each(rockDrum, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div button tick" id="drums'+item+'" data="'+value+'" style="background-color:#3C0;opacity:.2"></div>';
-	  console.log( index + ": " + value );
+		row+='<button class="btn btn-2 btn-2i" id="drums'+item+'" data="'+value+'">off</button>';
 	})
 	$('#rockDrumContainer').append(row);
 
@@ -40,10 +55,10 @@ $(function(){
 		Setting Rock Bass
 	*/
 	var rockBass = ['rock/Bass/EMOK1Bass86E-01.mp3','rock/Bass/EMOK1Bass86E-02.mp3','rock/Bass/EMOK1Bass86E-03.mp3','rock/Bass/EMOK1Bass86E-04.mp3','rock/Bass/EMOK1Bass86E-05.mp3','rock/Bass/EMOK1Bass86E-06.mp3','rock/Bass/EMOK1Bass86E-07.mp3','rock/Bass/EMOK1Bass86E-08.mp3','rock/Bass/EMOK1Bass86E-09.mp3','rock/Bass/EMOK1Bass86E-10.mp3'];
-	var row = '<div class="div button tick" id="bassDel" style="background-color:#A02">stop</div>';
+	var row = '<button class="btn btn-1 btn-1i" id="bassDel">stop</button>';
 	$.each(rockBass, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div button tick" id="bass'+item+'" data="'+value+'" style="background-color:#A02;opacity:.2"></div>';
+		row+='<button class="btn btn-1 btn-1i" id="bass'+item+'" data="'+value+'">off</button>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockBassContainer').append(row);
@@ -52,10 +67,10 @@ $(function(){
 		Setting Rock Lead
 	*/
 	var rockLead = ['rock/LeadGuitar/EMOK1LeadGuit86E-01.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-02.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-03.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-04.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-05.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-06.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-07.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-08.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-09.mp3','rock/LeadGuitar/EMOK1LeadGuit86E-10.mp3'];
-	var row = '<div class="div" id="leadguitarDel" style="background-color:#FA4">stop</div>';
+	var row = '<button class="btn btn-7 btn-7f btn-icon-only icon-star" id="leadguitarDel">stop</button>';
 	$.each(rockLead, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div button tick" id="leadguitar'+item+'" data="'+value+'" style="background-color:#FA4;opacity:.2"></div>';
+		row+='<button class="btn btn-7 btn-7f btn-icon-only icon-star" id="leadguitar'+item+'" data="'+value+'">off</button>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockLeadContainer').append(row);
@@ -64,10 +79,10 @@ $(function(){
 		Setting Rock Rhythm
 	*/
 	var rockRhythm = ['rock/RhythmGuitar/EMOK1RhyGuitA86E-01.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-02.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-03.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-04.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-05.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-06.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-07.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-08.mp3','rock/RhythmGuitar/EMOK1RhyGuitA86E-09.mp3','rock/RhythmGuitar/EMOK1RhyGuitAt86E-10.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-01.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-02.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-03.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-04.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-05.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-06.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-07.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-08.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-09.mp3','rock/RhythmGuitar/EMOK1RhyGuitB86E-10.mp3'];
-	var row = '<div class="div pause" id="rhythmguitarDel" style="background-color:#F0C;">stop</div>';
+	var row = '<button class="btn btn-3 btn-3b icon-star-2" id="rhythmguitarDel"></button>';
 	$.each(rockRhythm, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="div button tick" id="rhythmguitar'+item+'" data="'+value+'" style="background-color:#F0C;opacity:.2"></div>';
+		row+='<button class="btn btn-3 btn-3b icon-star-2" id="rhythmguitar'+item+'" data="'+value+'"></button>';
 	  console.log( index + ": " + value );
 	})
 	$('#rockRhythmContainer').append(row);
@@ -76,7 +91,7 @@ $(function(){
 		Handlers Sounds
 	*/
 
-	$('div').live('click', function(){
+	$('button').live('click', function(){
 		//this.beat = $('#'+this.id).attr('data');
 	});
 
@@ -96,8 +111,8 @@ $(function(){
 		window.nowRhythmguitar=undefined;window.nextRhythmguitar=undefined;
 	});
 
-	$('div[id*="drums"]').live('click', function(){
-		$('div[id*="drums"]').removeClass('active');
+	$('button[id*="drums"]').live('click', function(){
+		$('button[id*="drums"]').removeClass('active');
 		$(this).addClass('active');
 		if ($(this).attr('data')!==undefined){
 			window.nowDrumsData=$(this).attr('data');
@@ -113,8 +128,8 @@ $(function(){
 		}
 	});
 
-	$('div[id*="bass"]').live('click', function(){
-		$('div[id*="bass"]').removeClass('active');
+	$('button[id*="bass"]').live('click', function(){
+		$('button[id*="bass"]').removeClass('active');
 		$(this).addClass('active');
 		if ($(this).attr('data')!==undefined){
 			if (window.nowBass===undefined){
@@ -129,8 +144,8 @@ $(function(){
 		}
 	});
 
-	$('div[id*="leadguitar"]').live('click', function(){
-		$('div[id*="leadguitar"]').removeClass('active');
+	$('button[id*="leadguitar"]').live('click', function(){
+		$('button[id*="leadguitar"]').removeClass('active');
 		$(this).addClass('active');		
 		if ($(this).attr('data')!==undefined){
 			if (window.nowLeadguitar===undefined){
@@ -145,8 +160,8 @@ $(function(){
 		}
 	});
 
-	$('div[id*="rhythmguitar"]').live('click', function(){
-		$('div[id*="rhythmguitar"]').removeClass('active');
+	$('button[id*="rhythmguitar"]').live('click', function(){
+		$('button[id*="rhythmguitar"]').removeClass('active');
 		$(this).addClass('active');		
 		if ($(this).attr('data')!==undefined){
 			if (window.nowRhythmguitar===undefined){
@@ -348,8 +363,8 @@ $(function(){
 
 </head>
 <body>
-<input id="volume" type="range" min="0" max="10" value="1">
-<!--
+<!--<input id="volume" type="range" min="0" max="10" value="1">
+
 <div id="mp3_player">
   <div id="audio_box"></div>
 	<canvas id="analyser_render"></canvas>
@@ -357,23 +372,18 @@ $(function(){
 -->
 
 <div class="section group buttonHolder">
-	<div class="col drum button tick" id="rockDrumContainer"></div>
-	<div class="col bass button cross" id="rockBassContainer"></div>
-	<div class="col lead button heart" id="rockLeadContainer"></div>
-	<div class="col rhythm button flower" id="rockRhythmContainer"></div>
+	<div class="col drum button   color-2" id="rockDrumContainer"></div>
+	<div class="col bass button   color-1" id="rockBassContainer"></div>
+	<div class="col lead button   color-7" id="rockLeadContainer"></div>
+	<div class="col rhythm button color-3" id="rockRhythmContainer"></div>
 </div>
 
-<!--
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
-<div class="div"></div>
--->
+			<section class="color-2">
+				<p><img src='img/drum-icon.png'>
+					<button class="btn btn-2 btn-2i">On</button>
+					<button class="btn btn-2 btn-2j">Off</button>
+				</p>
+			</section>
+
 </body>
 </html>
