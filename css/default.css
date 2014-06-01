@@ -150,6 +150,22 @@ a:active {
 	display: none;
 }
 
+.color-blue {
+	background: #2095e0;
+}
+
+.color-red {
+	background: #f06060;
+}
+
+.color-green {
+	background: #2ac56c;
+}
+
+.color-yellow {
+	background: #fcd04b;
+}
+
 .color-1 {
 	background: #0e83cd;
 }

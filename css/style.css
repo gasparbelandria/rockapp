@@ -13,11 +13,6 @@ body{
   background-image: linear-gradient(top, #edecec, #cecbc9);
 }
 
-.active{
-  background-image:url(../img/bichito.gif);
-  opacity:.3;
-}
-
 /*  SECTIONS  */
 .section {
   clear: both;
@@ -25,6 +20,12 @@ body{
   margin: 0px;
 }
 
+/* buttons */
+.container{
+  float:left; 
+  width:25%; 
+  text-align:center;
+}
 
 /*  GROUPING  */
 .group:before,
