@@ -287,7 +287,7 @@ $(function(){
 		rhythmguitar11_105.stop();rhythmguitar12_105.stop();rhythmguitar13_105.stop();rhythmguitar14_105.stop();rhythmguitar15_105.stop();
 		rhythmguitar16_105.stop();rhythmguitar17_105.stop();rhythmguitar18_105.stop();rhythmguitar19_105.stop();rhythmguitar20_105.stop();
 	}
-
+console.log('load 105')
 });
 
 

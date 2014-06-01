@@ -412,8 +412,14 @@ if (!Function.prototype.bind) {
     current: 0,
     next: function() {
       if (!this._slides[this._getCurrentIndex() - 1].buildNext()) {
-        var next = query('#' + this.current + ' + .slide');
-        //this.current = (next) ? next.id : this.current;
+      	console.log(this.current)
+    	if (this.current=="thanks"){
+			var next = query('#landing-slide + .slide');
+    	}else{
+	        var next = query('#' + this.current + ' + .slide');
+	        //this.current = (next) ? next.id : this.current;
+    	}
+
         this._update((next) ? next.id : this.current);
       }
     },

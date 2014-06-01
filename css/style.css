@@ -21,10 +21,11 @@ body{
 }
 
 /* buttons */
-.container{
+.containerSounds{
   float:left; 
   width:25%; 
   text-align:center;
+  overflow: visible;
 }
 
 /*  GROUPING  */

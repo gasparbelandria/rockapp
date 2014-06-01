@@ -52,7 +52,6 @@ var rhythmguitar18 = new Howl({urls: ['rock86/RhythmGuitar/EMOK1RhyGuitB86E-08.w
 var rhythmguitar19 = new Howl({urls: ['rock86/RhythmGuitar/EMOK1RhyGuitB86E-09.wav'],loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
 var rhythmguitar20 = new Howl({urls: ['rock86/RhythmGuitar/EMOK1RhyGuitB86E-10.wav'],loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
 
-
 $(function(){	
 	/*************************************** Rock Drum
 		Setting Rock Drum
@@ -189,6 +188,7 @@ $(function(){
 	});
 
 	playDrums = function(){
+		console.log('play drums')
 		stopDrums();
 		switch(window.nextDrums){
 			case 'drums1': drums1.play(); break;
@@ -285,6 +285,8 @@ $(function(){
 		rhythmguitar16.stop();rhythmguitar17.stop();rhythmguitar18.stop();rhythmguitar19.stop();rhythmguitar20.stop();
 	}
 
+	/*
+
 	// Create a new instance of an audio object and adjust some of its properties
 	function setFrecuencyDrums(){
 		var audio = new Audio();
@@ -325,17 +327,6 @@ $(function(){
 	}
 
 
-	setTimeout(function() {
-	    var sound = new Howl({ urls: [
-	          "explosion.mp3",
-	          "explosion.m4a",
-	          "explosion.ogg"
-	    ]});
-	                          
-	    //sound.play();
-	    sound.volume(0.25);
-	});
-	/*
 	var soundId = "x";
 	var sound = new Howl({
 	  urls: ['rock86/RhythmGuitar/EMOK1RhyGuitA86E-09.wav'],
@@ -365,7 +356,7 @@ $(function(){
 		//sound.play('thor');
 	});
 */
-
+	console.log('load 86')
 
 });
 

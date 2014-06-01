@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html manifest="cache.appcache">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
@@ -17,25 +16,14 @@
     <script type="text/javascript" src="js/howler.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <!--<script src="js/modernizr.custom.js2"></script>-->
-    <script type="text/javascript" src="js/rock86.js"></script>
-    <script type="text/javascript" src="js/rock105.js"></script>
-    <script type="text/javascript" src="js/rock99.js"></script>
-    <script type="text/javascript" src="js/rock155.js"></script>
-    <script type="text/javascript" src="js/rock112.js"></script>
 
   </head>
   <body>
     <div id="flex-container">
     <nav id="helpers">
-      <button title="Previous slide" id="nav-prev" class="nav-prev">&#8701;</button>
+      <button title="Previous slide" id="nav-prev" class="nav-prev">&larr;</button>
       <button title="Jump to a random slide" id="slide-no">5</button>
-      <button title="Next slide" id="nav-next" class="nav-next">&#8702;</button>
-      <menu>
-        <button type="checkbox" data-command="toc" title="Table of Contents" class="toc">TOC</button>
-        <button type="checkbox" data-command="notes" title="View Slide Notes">&#9999;</button>
-        <button type="checkbox" data-command="source" title="View slide source">&#8635;</button>
-        <button type="checkbox" data-command="help" title="View Help">?</button>
-      </menu>
+      <button title="Next slide" id="nav-next" class="nav-next">&rarr;</button>
     </nav>
     <div class="slides">
       <div id="presentation-counter">Loading...</div>
@@ -46,8 +34,8 @@
         <div class="slide" id="landing-slide">
           <section class="middle">
             <p><img src="images/logo.gif"></p>
-            <p>I enjoyed developing this console and I hope that you enjoy</p>
             <p>Press <span id="left-init-key" class="key">&rarr;</span> </span> to advance.</p>
+            <small>This slide was taked in: <br /><a href="http://www.html5rocks.com/" border="0" target="_blank"><img src="images/html5rocks.png"></a></small>
           </section>
         </div>
 
@@ -55,15 +43,17 @@
         SLIDE 2
         -->
         <div class="slide" id="how-work">
-          <header>Slides controls</header>
+          <header>Controls</header>
           <section>
             <ul>
               <li><span class="key">&larr;</span> and <span class="key">&rarr;</span> to move around.</li>
-              <li><span class="key">Ctrl/Command</span> and <span class="key">+</span> or <span class="key">-</span> to zoom in and out if slides don’t fit.</li>
-              <li><span class="key">S</span> to view page source.</li>
-              <li><span class="key">3</span> to toggle 3D effect.</li>
+              <li><span class="key">S</span> to view page source ~ or ~ <a href="https://github.com/gasparbelandria/rockapp" target="_blank">https://github.com/gasparbelandria/rockapp</a></li>
+              <li><h2>How work?</h2>Each color represent a instrument, example Drums, Bass, Guitar ... and each number is a different sound</li>
+              <li><img src="images/demo.gif" style="margin-left:10%; margin-right:10%; "></li>
+              <li>No worry, the sound enter synchronously<h2>Press &rarr; and Enjoy! </h2></li>
             </ul>
           </section>
+
         </div>
 
 
@@ -73,10 +63,10 @@
 
 
         <div class="section group buttonHolder slide" id="rock-86bpm" style="overflow:scroll">
-          <div class="container col drum button   color-red"   id="rockDrumContainer"><h2 style="color:white">Drums</h2></div>
-          <div class="container col bass button   color-blue"  id="rockBassContainer"><h2 style="color:white">Bass</h2></div>
-          <div class="container col lead button   color-green" id="rockLeadContainer"><h2 style="color:white">Lead Guitar</h2></div>
-          <div class="container col rhythm button color-3" id="rockRhythmContainer"><h2 style="color:white">Rhythm Guitar</h2></div>
+          <div class="containerSounds col drum button   color-red"   id="rockDrumContainer"><h2 style="color:white">Drums<br />86 bpm</h2></div>
+          <div class="containerSounds col bass button   color-blue"  id="rockBassContainer"><h2 style="color:white">Bass<br />86 bpm</h2></div>
+          <div class="containerSounds col lead button   color-green" id="rockLeadContainer"><h2 style="color:white">Lead Guitar<br />86 bpm</h2></div>
+          <div class="containerSounds col rhythm button color-3" id="rockRhythmContainer"><h2 style="color:white">Rhythm Guitar<br />86 bpm</h2></div>
         </div>
 
         <!--
@@ -84,10 +74,10 @@
         -->
 
         <div class="section group buttonHolder slide" id="rock-105bpm" style="overflow:scroll">
-          <div class="container col drum button   color-red"   id="rockDrumContainer_105"><h2 style="color:white">Drums</h2></div>
-          <div class="container col bass button   color-blue"  id="rockBassContainer_105"><h2 style="color:white">Bass</h2></div>
-          <div class="container col lead button   color-green" id="rockLeadContainer_105"><h2 style="color:white">Lead Guitar</h2></div>
-          <div class="container col rhythm button color-3" id="rockRhythmContainer_105"><h2 style="color:white">Rhythm Guitar</h2></div>
+          <div class="containerSounds col drum button   color-red"   id="rockDrumContainer_105"><h2 style="color:white">Drums<br />105 bpm</h2></div>
+          <div class="containerSounds col bass button   color-blue"  id="rockBassContainer_105"><h2 style="color:white">Bass<br />105 bpm</h2></div>
+          <div class="containerSounds col lead button   color-green" id="rockLeadContainer_105"><h2 style="color:white">Lead Guitar<br />105 bpm</h2></div>
+          <div class="containerSounds col rhythm button color-3" id="rockRhythmContainer_105"><h2 style="color:white">Rhythm Guitar<br />105 bpm</h2></div>
         </div>
 
         <!--
@@ -95,10 +85,10 @@
         -->
 
         <div class="section group buttonHolder slide" id="rock-99bpm" style="overflow:scroll">
-          <div class="container col drum button   color-red"   id="rockDrumContainer_99"><h2 style="color:white">Drums</h2></div>
-          <div class="container col bass button   color-blue"  id="rockBassContainer_99"><h2 style="color:white">Bass</h2></div>
-          <div class="container col lead button   color-green" id="rockLeadContainer_99"><h2 style="color:white">Lead Guitar</h2></div>
-          <div class="container col rhythm button color-3" id="rockRhythmContainer_99"><h2 style="color:white">Rhythm Guitar</h2></div>
+          <div class="containerSounds col drum button   color-red"   id="rockDrumContainer_99"><h2 style="color:white">Drums<br />99 bpm</h2></div>
+          <div class="containerSounds col bass button   color-blue"  id="rockBassContainer_99"><h2 style="color:white">Bass<br />99 bpm</h2></div>
+          <div class="containerSounds col lead button   color-green" id="rockLeadContainer_99"><h2 style="color:white">Lead Guitar<br />99 bpm</h2></div>
+          <div class="containerSounds col rhythm button color-3" id="rockRhythmContainer_99"><h2 style="color:white">Rhythm Guitar<br />99 bpm</h2></div>
         </div>
 
         <!--
@@ -106,10 +96,10 @@
         -->
 
         <div class="section group buttonHolder slide" id="rock-155bpm" style="overflow:scroll">
-          <div class="container col drum button   color-red"   id="rockDrumContainer_155"><h2 style="color:white">Drums</h2></div>
-          <div class="container col bass button   color-blue"  id="rockBassContainer_155"><h2 style="color:white">Bass</h2></div>
-          <div class="container col lead button   color-green" id="rockLeadContainer_155"><h2 style="color:white">Lead Guitar</h2></div>
-          <div class="container col rhythm button color-3" id="rockRhythmContainer_155"><h2 style="color:white">Rhythm Guitar</h2></div>
+          <div class="containerSounds col drum button   color-red"   id="rockDrumContainer_155"><h2 style="color:white">Drums<br />155 bpm</h2></div>
+          <div class="containerSounds col bass button   color-blue"  id="rockBassContainer_155"><h2 style="color:white">Bass<br />155 bpm</h2></div>
+          <div class="containerSounds col lead button   color-green" id="rockLeadContainer_155"><h2 style="color:white">Lead Guitar<br />155 bpm</h2></div>
+          <div class="containerSounds col rhythm button color-3" id="rockRhythmContainer_155"><h2 style="color:white">Rhythm Guitar<br />155 bpm</h2></div>
         </div>
 
 
@@ -119,10 +109,10 @@
         -->
         <div class="slide" id="rock-122" id="rock-112bpm" style="overflow:scroll">
           <div class="section group buttonHolder">
-            <div class="container col drum button   color-red"   id="rockDrumContainer_112"><h2 style="color:white">Drums</h2></div>
-            <div class="container col bass button   color-blue"  id="rockBassContainer_112"><h2 style="color:white">Bass</h2></div>
-            <div class="container col lead button   color-green" id="rockLeadContainer_112"><h2 style="color:white">Lead Guitar</h2></div>
-            <div class="container col rhythm button color-3" id="rockRhythmContainer_112"><h2 style="color:white">Rhythm Guitar</h2></div>
+            <div class="containerSounds col drum button   color-red"   id="rockDrumContainer_112"><h2 style="color:white">Drums<br />155 bpm</h2></div>
+            <div class="containerSounds col bass button   color-blue"  id="rockBassContainer_112"><h2 style="color:white">Bass<br />155 bpm</h2></div>
+            <div class="containerSounds col lead button   color-green" id="rockLeadContainer_112"><h2 style="color:white">Lead Guitar<br />155 bpm</h2></div>
+            <div class="containerSounds col rhythm button color-3" id="rockRhythmContainer_112"><h2 style="color:white">Rhythm Guitar<br />155 bpm</h2></div>
           </div>
         </div>
 
@@ -130,61 +120,24 @@
         SLIDE 4
         -->
 
-        <div class="slide" id="heavy-metal-slide">
+        <div class="slide" id="thanks">
           <section class="middle formula">
             @gasparbelandria
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538ac2f43edc1fee"></script>
+            <!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-538ac2f43edc1fee"></script>-->
           </section>
         </div>
 
     </div> <!-- slides -->
     </div>
 
-    <!--[if lt IE 9]>
-    <script
-      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">
-    </script>
-    <script>CFInstall.check({ mode: "overlay" });</script>
-    <![endif]-->
-
-    <script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script>
+    <!--<script src="src/prettify/prettify.js" onload="prettyPrint();" defer></script>-->
     <script src="js/utils.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script>
-      // Check if new appcache is available, load it, and reload page.
-      if (window.applicationCache) {
-        window.applicationCache.addEventListener('updateready', function(e) {
-          if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
-            window.applicationCache.swapCache();
-            if (confirm('A new version of this site is available. Load it?')) {
-              window.location.reload();
-            }
-          }
-        }, false);
-      }
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-15028909-5']);
-      _gaq.push(['_trackPageview']);
-      _gaq.push(['_trackPageLoadTime']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <script>
-      UserVoice=window.UserVoice||[];(function(){var uv=document.createElement('script');uv.type='text/javascript';uv.async=true;uv.src='//widget.uservoice.com/Ad9aw9SG948Ku5YFYPWuA.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(uv,s)})();
-      UserVoice.push(['set', {
-        accent_color: '#448dd6',
-        trigger_color: 'white',
-        trigger_background_color: 'rgba(46, 49, 51, 0.6)'
-      }]);
-      UserVoice.push(['identify', {}]);
-      UserVoice.push(['addTrigger', { mode: 'contact', trigger_position: 'bottom-right' }]);
-      UserVoice.push(['autoprompt', {}]);
-    </script>
+    <script type="text/javascript" src="js/rock86.js"></script>
+    <script type="text/javascript" src="js/rock105.js"></script>
+    <script type="text/javascript" src="js/rock99.js"></script>
+    <script type="text/javascript" src="js/rock155.js"></script>
+    <script type="text/javascript" src="js/rock112.js"></script>
 
     <script>
       $( document ).ready(function() {
@@ -196,6 +149,20 @@
             stopRhythmguitar(); stopRhythmguitar_99(); stopRhythmguitar_105(); stopRhythmguitar_112(); stopRhythmguitar_155();
           }
         });
+        /*
+        setTimeout(function() {
+            var sound = new Howl({ urls: [
+                  "explosion.mp3",
+                  "explosion.m4a",
+                  "explosion.ogg"
+            ]});
+                                  
+            sound.play();
+            sound.volume(0.25);
+        });
+        */
+
+
       });
 
 

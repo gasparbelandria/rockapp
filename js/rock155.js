@@ -378,6 +378,7 @@ $(function(){
 		rhythmguitar36_155.stop();rhythmguitar37_155.stop();rhythmguitar38_155.stop();rhythmguitar39_155.stop();rhythmguitar40_155.stop();
 	}
 
+console.log('load 155')
 });
 
 

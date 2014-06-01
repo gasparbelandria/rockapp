@@ -338,7 +338,7 @@ $(function(){
 		rhythmguitar26_99.stop();rhythmguitar27_99.stop();rhythmguitar28_99.stop();rhythmguitar29_99.stop();rhythmguitar30_99.stop();
 		rhythmguitar31_99.stop();rhythmguitar32_99.stop();
 	}
-
+console.log('load 99')
 });
 
 
