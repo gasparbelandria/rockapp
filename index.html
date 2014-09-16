@@ -142,21 +142,18 @@
     <script>
 
       var eventHandler = function(event){
-        //console.log(event.type);
-        //console.log(event.timeStamp);
-        //console.log(document.readyState);
+        console.log(event.type);
+        console.log(event.timeStamp);
+        console.log(document.readyState);
       }
+
+      window.s = window.s || {};
 
       //console.log(document.readyState);
       document.addEventListener("readystatechange", eventHandler, false);
       document.addEventListener("DOMContentLoaded", eventHandler, false);
       window.addEventListener("load", eventHandler, false);
-      /*
-      document.addEventListener("DOMContentLoaded", function(event) {
-        alert("DOM fully loaded and parsed");
-      });
-      */
-
+      
       $( document ).ready(function() {
         $("body").keydown(function(e) {
           if ((e.keyCode == 37) || (e.keyCode == 39)){ // left
@@ -166,20 +163,6 @@
             stopRhythmguitar(); stopRhythmguitar_99(); stopRhythmguitar_105(); stopRhythmguitar_112(); stopRhythmguitar_155();
           }
         });
-        /*
-        setTimeout(function() {
-            var sound = new Howl({ urls: [
-                  "explosion.mp3",
-                  "explosion.m4a",
-                  "explosion.ogg"
-            ]});
-                                  
-            sound.play();
-            sound.volume(0.25);
-        });
-        */
-
-
       });
     </script>
 

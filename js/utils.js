@@ -38,13 +38,18 @@ if (!Function.prototype.bind) {
   window.utils = {
       // Asynchronously load templates located in separate .html files
       loadTemplate: function(sounds, callback) {
-
           var deferreds = [];
-
           $.each(sounds, function(index, sound) {
-              if (window[sound]) {
-                  deferreds.push($.get(sound + '.wav', function(data) {
-                      window[sound] = data;
+              var that = this;
+              this.sound = sound;
+              if (sound) {
+                  var wav = window.location.origin + window.location.pathname + sound;
+                  deferreds.push($.get(wav, function(data) {
+                    var name = that.sound.split('.');
+                        name = name[0].split('/');
+                        name = name[2];
+                        name = name.replace("-", "");
+                      window[name] = {data:data};
                   }));
               } else {
                   console.log(sound + " not found");
@@ -52,6 +57,7 @@ if (!Function.prototype.bind) {
           });
 
           $.when.apply(null, deferreds).done(callback);
+         // console.log(window);
       },
   };
 
