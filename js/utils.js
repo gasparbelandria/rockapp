@@ -32,6 +32,29 @@ if (!Function.prototype.bind) {
   var ctr = 0;
   var spaces = /\s+/, a1 = [''];
 
+  /*
+  gaspar: preload sounds
+  */
+  window.utils = {
+      // Asynchronously load templates located in separate .html files
+      loadTemplate: function(sounds, callback) {
+
+          var deferreds = [];
+
+          $.each(sounds, function(index, sound) {
+              if (window[sound]) {
+                  deferreds.push($.get(sound + '.wav', function(data) {
+                      window[sound] = data;
+                  }));
+              } else {
+                  console.log(sound + " not found");
+              }
+          });
+
+          $.when.apply(null, deferreds).done(callback);
+      },
+  };
+
   var toArray = function(list) {
     return Array.prototype.slice.call(list || [], 0);
   };
@@ -412,7 +435,6 @@ if (!Function.prototype.bind) {
     current: 0,
     next: function() {
       if (!this._slides[this._getCurrentIndex() - 1].buildNext()) {
-      	console.log(this.current)
     	if (this.current=="thanks"){
 			var next = query('#landing-slide + .slide');
     	}else{

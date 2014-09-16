@@ -1,3 +1,15 @@
+utils.loadTemplate([
+	'rock86/Drums/EMOK1Beat86-01.wav', 
+	'rock86/Drums/EMOK1Beat86-02.wav', 
+	'rock86/Drums/EMOK1Beat86-03.wav', 
+	'rock86/Drums/EMOK1Beat86-04.wav', 
+	'rock86/Drums/EMOK1Beat86-05.wav', 
+	'rock86/Drums/EMOK1Beat86-06.wav', 
+	'rock86/Drums/EMOK1Beat86-07.wav', 
+	'rock86/Drums/EMOK1Beat86-08.wav', 
+	'rock86/Drums/EMOK1Beat86-09.wav', 
+	'rock86/Drums/EMOK1Beat86-10.wav']);
+
 var drums1 = new Howl({urls: ['rock86/Drums/EMOK1Beat86-01.wav'],loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
 var drums2 = new Howl({urls: ['rock86/Drums/EMOK1Beat86-02.wav'],loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
 var drums3 = new Howl({urls: ['rock86/Drums/EMOK1Beat86-03.wav'],loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
@@ -188,7 +200,6 @@ $(function(){
 	});
 
 	playDrums = function(){
-		console.log('play drums')
 		stopDrums();
 		switch(window.nextDrums){
 			case 'drums1': drums1.play(); break;
@@ -351,13 +362,10 @@ $(function(){
 	sound.play('thor');
 
 	$('#volume').change(function() {
-		console.log(sound)
 		sound.volume($(this).val(), soundId)
 		//sound.play('thor');
 	});
 */
-	console.log('load 86')
-
 });
 
 
