@@ -1,89 +1,9 @@
-/*utils.loadTemplate([
-	'rock86/Drums/EMOK1Beat86-01.wav', 
-	'rock86/Drums/EMOK1Beat86-02.wav', 
-	'rock86/Drums/EMOK1Beat86-03.wav', 
-	'rock86/Drums/EMOK1Beat86-04.wav', 
-	'rock86/Drums/EMOK1Beat86-05.wav', 
-	'rock86/Drums/EMOK1Beat86-06.wav', 
-	'rock86/Drums/EMOK1Beat86-07.wav', 
-	'rock86/Drums/EMOK1Beat86-08.wav', 
-	'rock86/Drums/EMOK1Beat86-09.wav', 
-	'rock86/Drums/EMOK1Beat86-10.wav']);
-*/
-
-// Preload Howl objects
-var drums = [
-	'rock86/Drums/EMOK1Beat86-01.wav', 
-	'rock86/Drums/EMOK1Beat86-02.wav', 
-	'rock86/Drums/EMOK1Beat86-03.wav', 
-	'rock86/Drums/EMOK1Beat86-04.wav', 
-	'rock86/Drums/EMOK1Beat86-05.wav', 
-	'rock86/Drums/EMOK1Beat86-06.wav', 
-	'rock86/Drums/EMOK1Beat86-07.wav', 
-	'rock86/Drums/EMOK1Beat86-08.wav', 
-	'rock86/Drums/EMOK1Beat86-09.wav', 
-	'rock86/Drums/EMOK1Beat86-10.wav'];
-
-var bass = [
-	'rock86/Bass/EMOK1Bass86E-01.wav', 
-	'rock86/Bass/EMOK1Bass86E-02.wav', 
-	'rock86/Bass/EMOK1Bass86E-03.wav', 
-	'rock86/Bass/EMOK1Bass86E-04.wav', 
-	'rock86/Bass/EMOK1Bass86E-05.wav', 
-	'rock86/Bass/EMOK1Bass86E-06.wav', 
-	'rock86/Bass/EMOK1Bass86E-07.wav', 
-	'rock86/Bass/EMOK1Bass86E-08.wav', 
-	'rock86/Bass/EMOK1Bass86E-09.wav',  
-	'rock86/Bass/EMOK1Bass86E-10.wav'];
-
-var leadGuitar = [
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-01.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-02.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-03.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-04.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-05.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-06.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-07.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-08.wav', 
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-09.wav',  
-	'rock86/LeadGuitar/EMOK1LeadGuit86E-10.wav'];
-
-var rhythmGuitar = [
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-01.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-02.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-03.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-04.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-05.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-06.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-07.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-08.wav', 
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-09.wav',  
-	'rock86/RhythmGuitar/EMOK1RhyGuitA86E-10.wav'];
-
-var howls = {};
-for (var i=0; i<drums.length; i++) {
-    howls[drums[i]] = new Howl({urls: [drums[i]] , loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
-}
-
-for (var i=0; i<bass.length; i++) {
-    howls[bass[i]] = new Howl({urls: [bass[i]] , loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
-}
-
-for (var i=0; i<leadGuitar.length; i++) {
-    howls[leadGuitar[i]] = new Howl({urls: [leadGuitar[i]] , loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
-}
-
-for (var i=0; i<rhythmGuitar.length; i++) {
-    howls[rhythmGuitar[i]] = new Howl({urls: [rhythmGuitar[i]] , loop: true, onend: function() {playRhythmguitar();playLeadguitar();playDrums();playBass();}});
-}
-
-$(function(){	
+$(function(){
 	/*************************************** Rock Drum
 		Setting Rock Drum
 	*/
-	var rockDrum = ['rock86/Drums/EMOK1Beat86-01.mp3','rock86/Drums/EMOK1Beat86-02.mp3','rock86/Drums/EMOK1Beat86-03.mp3','rock86/Drums/EMOK1Beat86-04.mp3','rock86/Drums/EMOK1Beat86-05.mp3','rock86/Drums/EMOK1Beat86-06.mp3','rock86/Drums/EMOK1Beat86-07.mp3','rock86/Drums/EMOK1Beat86-08.mp3','rock86/Drums/EMOK1Beat86-09.mp3','rock86/Drums/EMOK1Beat86-10.mp3'];
 	var row = '<button class="btn btn-red" id="drumsDel">stop</button>';
-	$.each(rockDrum, function( index, value ) {
+	$.each(drums86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<button class="btn btn-red" id="drums'+item+'" data="'+value+'">'+item+'</button>';
 	})
@@ -92,9 +12,8 @@ $(function(){
 	/*************************************** Rock Bass
 		Setting Rock Bass
 	*/
-	var rockBass = ['rock86/Bass/EMOK1Bass86E-01.mp3','rock86/Bass/EMOK1Bass86E-02.mp3','rock86/Bass/EMOK1Bass86E-03.mp3','rock86/Bass/EMOK1Bass86E-04.mp3','rock86/Bass/EMOK1Bass86E-05.mp3','rock86/Bass/EMOK1Bass86E-06.mp3','rock86/Bass/EMOK1Bass86E-07.mp3','rock86/Bass/EMOK1Bass86E-08.mp3','rock86/Bass/EMOK1Bass86E-09.mp3','rock86/Bass/EMOK1Bass86E-10.mp3'];
 	var row = '<button class="btn btn-blue" id="bassDel">stop</button>';
-	$.each(rockBass, function( index, value ) {
+	$.each(bass86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<button class="btn btn-blue" id="bass'+item+'" data="'+value+'">'+item+'</button>';
 	})
@@ -103,9 +22,8 @@ $(function(){
 	/*************************************** Rock Lead
 		Setting Rock Lead
 	*/
-	var rockLead = ['rock86/LeadGuitar/EMOK1LeadGuit86E-01.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-02.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-03.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-04.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-05.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-06.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-07.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-08.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-09.mp3','rock86/LeadGuitar/EMOK1LeadGuit86E-10.mp3'];
 	var row = '<button class="btn btn-green" id="leadguitarDel">stop</button>';
-	$.each(rockLead, function( index, value ) {
+	$.each(leadGuitar86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<button class="btn btn-green" id="leadguitar'+item+'" data="'+value+'">'+item+'</button>';
 	})
@@ -114,9 +32,8 @@ $(function(){
 	/*************************************** Rock Rhythm
 		Setting Rock Rhythm
 	*/
-	var rockRhythm = ['rock86/RhythmGuitar/EMOK1RhyGuitA86E-01.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-02.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-03.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-04.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-05.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-06.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-07.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-08.mp3','rock86/RhythmGuitar/EMOK1RhyGuitA86E-09.mp3','rock86/RhythmGuitar/EMOK1RhyGuitAt86E-10.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-01.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-02.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-03.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-04.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-05.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-06.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-07.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-08.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-09.mp3','rock86/RhythmGuitar/EMOK1RhyGuitB86E-10.mp3'];
 	var row = '<button class="btn btn-yellow" id="rhythmguitarDel">stop</button>';
-	$.each(rockRhythm, function( index, value ) {
+	$.each(rhythmGuitar86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<button class="btn btn-yellow" id="rhythmguitar'+item+'" data="'+value+'">'+item+'</button>';
 	})
@@ -278,26 +195,26 @@ $(function(){
 
 
 	stopDrums = function(){
-		for (var i=0; i<drums.length; i++) {
-		    howls[drums[i]].stop();
+		for (var i=0; i<drums86.length; i++) {
+		    howls[drums86[i]].stop();
 		}
 	}
 
 	stopBass = function(){
-		for (var i=0; i<bass.length; i++) {
-		    howls[bass[i]].stop();
+		for (var i=0; i<bass86.length; i++) {
+		    howls[bass86[i]].stop();
 		}
 	}
 
 	stopLeadguitar = function(){
-		for (var i=0; i<leadGuitar.length; i++) {
-		    howls[leadGuitar[i]].stop();
+		for (var i=0; i<leadGuitar86.length; i++) {
+		    howls[leadGuitar86[i]].stop();
 		}
 	}
 
 	stopRhythmguitar = function(){
-		for (var i=0; i<rhythmGuitar.length; i++) {
-		    howls[rhythmGuitar[i]].stop();
+		for (var i=0; i<rhythmGuitar86.length; i++) {
+		    howls[rhythmGuitar86[i]].stop();
 		}
 	}
 
