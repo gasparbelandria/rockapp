@@ -9,13 +9,44 @@
     <link href="css/common.css" rel="stylesheet" type="text/css" media="screen" />
 
 
+<style type="text/css">
+/*<![CDATA[*/
+
+  body { background-color: lime; }
+
+/*]]>*/
+</style>
+
+
     <!-- ROCK -->
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" Href="css/style.css" />
+    <script type="text/javascript" src="js/contentloaded.js"></script>
     <script type="text/javascript" src="js/howler.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <!--<script src="js/modernizr.custom.js2"></script>-->
+
+<script type="text/javascript">
+//<![CDATA[
+
+  var $tt = (new Date).getTime();
+  function timeElapsed(t) { return ((new Date()).getTime() - t); }
+
+  contentLoaded(window,
+    function (e) {
+      document.body.style.backgroundColor = 'green';
+      window.status =
+      window.defaultStatus =
+        ' * ' + (e.type || e) + ' ' +
+        ' - ' + (e.eventType ? e.eventType : 'native') +
+        ' in ' + timeElapsed($tt) + ' ms.';
+        console.log(window.defaultStatus);
+    }
+  );
+
+//]]>
+</script>
 
   </head>
   <body>
@@ -174,6 +205,13 @@
       });
     </script>
 
+<script type="text/javascript">
+//<![CDATA[
+
+  document.body.style.backgroundColor = 'red';
+
+//]]>
+</script>
 
   </body>
 

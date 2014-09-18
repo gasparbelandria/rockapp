@@ -152,48 +152,48 @@ $(function(){
 	playBass_105 = function(){
 		stopBass_105();
 		switch(window.nextBass_105){
-			case 'bass_1051': howls['rock86/Bass/EMOK1Bass86E-01.wav'].play(); break;
-			case 'bass_1052': howls['rock86/Bass/EMOK1Bass86E-02.wav'].play(); break;
-			case 'bass_1053': howls['rock86/Bass/EMOK1Bass86E-03.wav'].play(); break;
-			case 'bass_1054': howls['rock86/Bass/EMOK1Bass86E-04.wav'].play(); break;
-			case 'bass_1055': howls['rock86/Bass/EMOK1Bass86E-05.wav'].play(); break;
-			case 'bass_1056': howls['rock86/Bass/EMOK1Bass86E-06.wav'].play(); break;
-			case 'bass_1057': howls['rock86/Bass/EMOK1Bass86E-07.wav'].play(); break;
-			case 'bass_1058': howls['rock86/Bass/EMOK1Bass86E-08.wav'].play(); break;
-			case 'bass_1059': howls['rock86/Bass/EMOK1Bass86E-09.wav'].play(); break;
-			case 'bass_10510':howls['rock86/Bass/EMOK1Bass86E-10.wav'].play(); break;
+			case 'bass_1051': howls['rock105/Bass/EMOK2Bass105D-01.wav'].play(); break;
+			case 'bass_1052': howls['rock105/Bass/EMOK2Bass105D-02.wav'].play(); break;
+			case 'bass_1053': howls['rock105/Bass/EMOK2Bass105D-03.wav'].play(); break;
+			case 'bass_1054': howls['rock105/Bass/EMOK2Bass105D-04.wav'].play(); break;
+			case 'bass_1055': howls['rock105/Bass/EMOK2Bass105D-05.wav'].play(); break;
+			case 'bass_1056': howls['rock105/Bass/EMOK2Bass105D-06.wav'].play(); break;
+			case 'bass_1057': howls['rock105/Bass/EMOK2Bass105D-07.wav'].play(); break;
+			case 'bass_1058': howls['rock105/Bass/EMOK2Bass105D-08.wav'].play(); break;
+			case 'bass_1059': howls['rock105/Bass/EMOK2Bass105D-09.wav'].play(); break;
+			case 'bass_10510':howls['rock105/Bass/EMOK2Bass105D-10.wav'].play(); break;
 		}			
 	}
 
 	playLeadguitar_105 = function(){
 		stopLeadguitar_105();
 		switch(window.nextLeadguitar_105){
-			case 'leadguitar_1051': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-01.wav'].play(); break;
-			case 'leadguitar_1052': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-02.wav'].play(); break;
-			case 'leadguitar_1053': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-03.wav'].play(); break;
-			case 'leadguitar_1054': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-04.wav'].play(); break;
-			case 'leadguitar_1055': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-05.wav'].play(); break;
-			case 'leadguitar_1056': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-06.wav'].play(); break;
-			case 'leadguitar_1057': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-07.wav'].play(); break;
-			case 'leadguitar_1058': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-08.wav'].play(); break;
-			case 'leadguitar_1059': howls['rock86/LeadGuitar/EMOK1LeadGuit86E-09.wav'].play(); break;
-			case 'leadguitar_10510':howls['rock86/LeadGuitar/EMOK1LeadGuit86E-10.wav'].play(); break;
+			case 'leadguitar_1051': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-01.wav'].play(); break;
+			case 'leadguitar_1052': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-02.wav'].play(); break;
+			case 'leadguitar_1053': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-03.wav'].play(); break;
+			case 'leadguitar_1054': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-04.wav'].play(); break;
+			case 'leadguitar_1055': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-05.wav'].play(); break;
+			case 'leadguitar_1056': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-06.wav'].play(); break;
+			case 'leadguitar_1057': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-07.wav'].play(); break;
+			case 'leadguitar_1058': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-08.wav'].play(); break;
+			case 'leadguitar_1059': howls['rock105/LeadGuitar/EMOK2LeadGuit105D-09.wav'].play(); break;
+			case 'leadguitar_10510':howls['rock105/LeadGuitar/EMOK2LeadGuit105D-10.wav'].play(); break;
 		}			
 	}
 
 	playRhythmguitar_105 = function(){
 		stopRhythmguitar_105();
 		switch(window.nextRhythmguitar_105){
-			case 'rhythmguitar_1051': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-01.wav'].play(); break;
-			case 'rhythmguitar_1052': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-02.wav'].play(); break;
-			case 'rhythmguitar_1053': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-03.wav'].play(); break;
-			case 'rhythmguitar_1054': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-04.wav'].play(); break;
-			case 'rhythmguitar_1055': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-05.wav'].play(); break;
-			case 'rhythmguitar_1056': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-06.wav'].play(); break;
-			case 'rhythmguitar_1057': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-07.wav'].play(); break;
-			case 'rhythmguitar_1058': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-08.wav'].play(); break;
-			case 'rhythmguitar_1059': howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-09.wav'].play(); break;
-			case 'rhythmguitar_10510':howls['rock86/RhythmGuitar/EMOK1RhyGuitA86E-10.wav'].play(); break;
+			case 'rhythmguitar_1051': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-01.wav'].play(); break;
+			case 'rhythmguitar_1052': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-02.wav'].play(); break;
+			case 'rhythmguitar_1053': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-03.wav'].play(); break;
+			case 'rhythmguitar_1054': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-04.wav'].play(); break;
+			case 'rhythmguitar_1055': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-05.wav'].play(); break;
+			case 'rhythmguitar_1056': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-06.wav'].play(); break;
+			case 'rhythmguitar_1057': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-07.wav'].play(); break;
+			case 'rhythmguitar_1058': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-08.wav'].play(); break;
+			case 'rhythmguitar_1059': howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-09.wav'].play(); break;
+			case 'rhythmguitar_10510':howls['rock105/RhythmGuitar/EMOK2RhyGuitA105D-10.wav'].play(); break;
 		}			
 	}
 
