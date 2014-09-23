@@ -50,6 +50,7 @@ if (!Function.prototype.bind) {
                         name = name[2];
                         name = name.replace("-", "");
                       window[name] = {data:data};
+                      console.log(name);
                   }));
               } else {
                   console.log(sound + " not found");
