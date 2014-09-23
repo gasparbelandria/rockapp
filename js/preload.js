@@ -267,7 +267,7 @@
 		'rock99/Drums/EMOK3Beat99-05.wav', 
 		'rock99/Drums/EMOK3Beat99-06.wav', 
 		'rock99/Drums/EMOK3Beat99-07.wav', 
-		'rock99/Drums/EMOK3Beat99-08.wav', 
+		'rock99/Drums/EMOK3Beat99-08.wav']; 
 
 	var bass99 = [
 		'rock99/Bass/EMOK3BassA99A-01.wav', 
@@ -304,6 +304,57 @@
 		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-08.wav', 
 		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-09.wav',  
 		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-10.wav'];
+
+	/*
+	 * 115
+	 */ 
+	var drums115 = [
+		'rock155/Drums/EMOK4Beat155-01.wav', 
+		'rock155/Drums/EMOK4Beat155-02.wav', 
+		'rock155/Drums/EMOK4Beat155-03.wav', 
+		'rock155/Drums/EMOK4Beat155-04.wav', 
+		'rock155/Drums/EMOK4Beat155-05.wav', 
+		'rock155/Drums/EMOK4Beat155-06.wav', 
+		'rock155/Drums/EMOK4Beat155-07.wav', 
+		'rock155/Drums/EMOK4Beat155-08.wav',
+		'rock155/Drums/EMOK4Beat155-09.wav',
+		'rock155/Drums/EMOK4Beat155-10.wav'];
+
+	var bass115 = [
+		'rock155/Bass/EMOK4BassA155G-01.wav', 
+		'rock155/Bass/EMOK4BassA155G-02.wav', 
+		'rock155/Bass/EMOK4BassA155G-03.wav', 
+		'rock155/Bass/EMOK4BassA155G-04.wav', 
+		'rock155/Bass/EMOK4BassA155G-05.wav', 
+		'rock155/Bass/EMOK4BassA155G-06.wav', 
+		'rock155/Bass/EMOK4BassA155G-07.wav', 
+		'rock155/Bass/EMOK4BassA155G-08.wav', 
+		'rock155/Bass/EMOK4BassA155G-09.wav',  
+		'rock155/Bass/EMOK4BassA155G-10.wav'];
+
+	var leadGuitar115 = [
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-01.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-02.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-03.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-04.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-05.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-06.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-07.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-08.wav', 
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-09.wav',  
+		'rock155/LeadGuitar/EMOK4LeadGuitA155G-10.wav'];
+
+	var rhythmGuitar115 = [
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-01.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-02.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-03.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-04.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-05.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-06.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-07.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-08.wav', 
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-09.wav',  
+		'rock155/RhythmGuitar/EMOK4RhyGuitA155G-10.wav'];
 
 
 	var howls = {};
@@ -351,4 +402,19 @@
 	}
 	for (var i=0; i<rhythmGuitar99.length; i++) {
 	    howls[rhythmGuitar99[i]] = new Howl({urls: [rhythmGuitar99[i]] , loop: true, onend: function() {playRhythmguitar_99();playLeadguitar_99();playDrums_99();playBass_99();}});
+	}
+	/*
+	 * 115
+	 */
+	for (var i=0; i<drums115.length; i++) {
+	    howls[drums115[i]] = new Howl({urls: [drums115[i]] , loop: true, onend: function() {playRhythmguitar_115();playLeadguitar_115();playDrums_115();playBass_115();}});
+	}
+	for (var i=0; i<bass115.length; i++) {
+	    howls[bass115[i]] = new Howl({urls: [bass115[i]] , loop: true, onend: function() {playRhythmguitar_115();playLeadguitar_115();playDrums_115();playBass_115();}});
+	}
+	for (var i=0; i<leadGuitar115.length; i++) {
+	    howls[leadGuitar115[i]] = new Howl({urls: [leadGuitar115[i]] , loop: true, onend: function() {playRhythmguitar_115();playLeadguitar_115();playDrums_115();playBass_115();}});
+	}
+	for (var i=0; i<rhythmGuitar115.length; i++) {
+	    howls[rhythmGuitar115[i]] = new Howl({urls: [rhythmGuitar115[i]] , loop: true, onend: function() {playRhythmguitar_115();playLeadguitar_115();playDrums_115();playBass_115();}});
 	}
