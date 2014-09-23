@@ -256,6 +256,54 @@
 		'rock112/RhythmGuitar/EMOK5RhyGuitA112E-08.wav', 
 		'rock112/RhythmGuitar/EMOK5RhyGuitA112E-09.wav',  
 		'rock112/RhythmGuitar/EMOK5RhyGuitA112E-10.wav'];
+	/*
+	 * 99
+	 */ 
+	var drums99 = [
+		'rock99/Drums/EMOK3Beat99-01.wav', 
+		'rock99/Drums/EMOK3Beat99-02.wav', 
+		'rock99/Drums/EMOK3Beat99-03.wav', 
+		'rock99/Drums/EMOK3Beat99-04.wav', 
+		'rock99/Drums/EMOK3Beat99-05.wav', 
+		'rock99/Drums/EMOK3Beat99-06.wav', 
+		'rock99/Drums/EMOK3Beat99-07.wav', 
+		'rock99/Drums/EMOK3Beat99-08.wav', 
+
+	var bass99 = [
+		'rock99/Bass/EMOK3BassA99A-01.wav', 
+		'rock99/Bass/EMOK3BassA99A-02.wav', 
+		'rock99/Bass/EMOK3BassA99A-03.wav', 
+		'rock99/Bass/EMOK3BassA99A-04.wav', 
+		'rock99/Bass/EMOK3BassA99A-05.wav', 
+		'rock99/Bass/EMOK3BassA99A-06.wav', 
+		'rock99/Bass/EMOK3BassA99A-07.wav', 
+		'rock99/Bass/EMOK3BassA99A-08.wav', 
+		'rock99/Bass/EMOK3BassA99A-09.wav',  
+		'rock99/Bass/EMOK3BassA99A-10.wav'];
+
+	var leadGuitar99 = [
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-01.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-02.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-03.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-04.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-05.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-06.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-07.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-08.wav', 
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-09.wav',  
+		'rock99/LeadGuitar/EMOK3LeadGuitA99A-10.wav'];
+
+	var rhythmGuitar99 = [
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-01.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-02.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-03.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-04.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-05.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-06.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-07.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-08.wav', 
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-09.wav',  
+		'rock99/RhythmGuitar/EMOK3RhyGuitA99A-10.wav'];
 
 
 	var howls = {};
@@ -288,4 +336,19 @@
 	}
 	for (var i=0; i<rhythmGuitar105.length; i++) {
 	    howls[rhythmGuitar105[i]] = new Howl({urls: [rhythmGuitar105[i]] , loop: true, onend: function() {playRhythmguitar_105();playLeadguitar_105();playDrums_105();playBass_105();}});
+	}
+	/*
+	 * 99
+	 */
+	for (var i=0; i<drums99.length; i++) {
+	    howls[drums99[i]] = new Howl({urls: [drums99[i]] , loop: true, onend: function() {playRhythmguitar_99();playLeadguitar_99();playDrums_99();playBass_99();}});
+	}
+	for (var i=0; i<bass99.length; i++) {
+	    howls[bass99[i]] = new Howl({urls: [bass99[i]] , loop: true, onend: function() {playRhythmguitar_99();playLeadguitar_99();playDrums_99();playBass_99();}});
+	}
+	for (var i=0; i<leadGuitar99.length; i++) {
+	    howls[leadGuitar99[i]] = new Howl({urls: [leadGuitar99[i]] , loop: true, onend: function() {playRhythmguitar_99();playLeadguitar_99();playDrums_99();playBass_99();}});
+	}
+	for (var i=0; i<rhythmGuitar99.length; i++) {
+	    howls[rhythmGuitar99[i]] = new Howl({urls: [rhythmGuitar99[i]] , loop: true, onend: function() {playRhythmguitar_99();playLeadguitar_99();playDrums_99();playBass_99();}});
 	}
