@@ -340,5 +340,5 @@ for (var i=0; i<soundsArray.length; i++) {
 	    sounds.push(soundsArray[i][j]);
 	}
 }
-//console.log(sounds);
+
 utils.loadTemplate(sounds, function() {});

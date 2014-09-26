@@ -51,13 +51,18 @@ if (!Function.prototype.bind) {
                         name = name.replace("-", "");
                       window[name] = {data:data};
                       console.log(name);
+                      $('#preload').html(name);
                   }));
               } else {
                   console.log(sound + " not found");
               }
           });
 
-          $.when.apply(null, deferreds).done(callback);
+          //$.when.apply(null, deferreds).done(callback);
+          $.when.apply(null, deferreds).done(function(){
+            $('#main').css('display','block');
+            $('#preload').css('display','none')
+          });
          // console.log(window);
       },
   };
