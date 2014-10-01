@@ -69,7 +69,6 @@ body {
   overflow: hidden;
   display: none;
   position: absolute;
-  border-radius: 10px;
   background-color: #eee;
 }
 .slide p, .slide textarea {
