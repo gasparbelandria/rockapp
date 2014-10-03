@@ -1,5 +1,9 @@
 body{
   background: #343233;
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-image:url(../images/rock.jpg);  
+  background-size: cover;
 }
 .holder{
   position: absolute;

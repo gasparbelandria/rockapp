@@ -17,8 +17,8 @@
                         name = name[2];
                         name = name.replace("-", "");
                       window[name] = {data:data};
-                      console.log(name);
-                      $('#preload').html(name);
+                      //console.log(name);
+                      //$('#preload').html(name);
                   }));
               } else {
                   console.log(sound + " not found");

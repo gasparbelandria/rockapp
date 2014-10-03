@@ -20,7 +20,6 @@
 
     <script type="text/javascript" src="js/howler.min.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/accelerometer.js"></script>
 
   </head>
   <body>
@@ -41,7 +40,7 @@
       </div>
     </div>
 
-    <div id="main">
+    <div id="main" style="width:50%; height:50%; border:1px solid red;">
 
       <div class="section group buttonHolder slide" id="rock-86bpm" style="overflow:inherit">
         <div class="wrapper preload">              
@@ -147,21 +146,11 @@
     
     <script type="text/javascript" src="js/rock112.js"></script>
     -->
+    <script type="text/javascript" src="js/accelerometer.js"></script>
 
     <script>
 
-      var eventHandler = function(event){
-        //console.log(event.type);
-        //console.log(event.timeStamp);
-        //console.log(document.readyState);
-      }
-
       window.s = window.s || {};
-
-      //console.log(document.readyState);
-      document.addEventListener("readystatechange", eventHandler, false);
-      document.addEventListener("DOMContentLoaded", eventHandler, false);
-      window.addEventListener("load", eventHandler, false);
       
       $( document ).ready(function() {
         $("body").keydown(function(e) {

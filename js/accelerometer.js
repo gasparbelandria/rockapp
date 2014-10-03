@@ -19,7 +19,9 @@
     }
 
     var backgroundPositionValue = yTilt + 'px ' + xTilt + "px";
+    console.log(backgroundPositionValue);
+    //background.style.backgroundPosition = backgroundPositionValue;
 
-    background.style.backgroundPosition = backgroundPositionValue;
+    document.body.style.backgroundPosition=backgroundPositionValue;
   }, false);    
 })();
