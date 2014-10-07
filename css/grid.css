@@ -38,22 +38,22 @@ body,
 }
 
 .top-left {
-  background: rgba(236,208,120,1);
+  /*background: rgba(236,208,120,1);*/
 }
 
 .top-right {
-  background: rgba(217,91,67,1);
+  /*background: rgba(217,91,67,1);*/
   border-right: 10px solid #fff;
 }
 
 .bottom-right {
-  background: rgba(192,41,66,1);
+  /*background: rgba(192,41,66,1);*/
   border-bottom: 10px solid #fff;
   border-right: 10px solid #fff;
 }
 
 .bottom-left {
-  background: rgba(84,36,55,1);
+  /*background: rgba(84,36,55,1);*/
   border-bottom: 10px solid #fff;
 }
 
@@ -150,7 +150,7 @@ body,
   position: absolute;
   width: 200px;
   height: 200px;
-  background-color: rgba(255,255,255,1);
+  /*background-color: rgba(255,255,255,1);*/
   border-radius: 500px;
   transition: background-color .25s ease;
   opacity: 1;
@@ -177,7 +177,7 @@ body,
 }
 
 .grid-unit:hover .sphere {
-  background-color: rgba(255,255,255,0);
+  /*background-color: rgba(255,255,255,0);*/
 }
 
 .icon {
