@@ -6,14 +6,8 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
-  /*  
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-image:url(../images/rock.jpg);  
-  background-size: 100% 100%;
-  */
 }
+
 .holder{
   position: absolute;
   left: 48%;

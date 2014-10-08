@@ -96,27 +96,39 @@ body,
 }
 
 .top-left .label {
+  bottom: 10px;
+  left: 10px;
+  /*
   bottom: 100px;
   right: 80px;
-  transform: rotate(45deg);
+  transform: rotate(45deg);*/
 }
 
 .top-right .label {
+  bottom: 10px;
+  right: 10px;
+  /*
   bottom: 100px;
   left: 80px;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg);*/
 }
 
 .bottom-left .label {
+  top: 10px;
+  left: 10px;
+  /*
   top: 100px;
   right: 80px;
-  transform: rotate(-45deg);
+  transform: rotate(-45deg);*/
 }
 
 .bottom-right .label {
+  top: 10px;
+  right: 10px;
+  /*
   top: 100px;
   left: 80px;
-  transform: rotate(45deg);
+  transform: rotate(45deg);*/
 }
 
 .top-left .desc {

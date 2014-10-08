@@ -25,7 +25,7 @@ $(function(){
 	var row = '<button class="btn btn-green box" id="leadguitarDel">stop</button>';
 	$.each(leadGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-green box" id="leadguitar'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<button class="btn btn-green box" id="leadguitar'+item+'" data="'+value+'">-'+item+'-</button>';
 	})
 	$('#rockLeadContainer').append(row);
 
