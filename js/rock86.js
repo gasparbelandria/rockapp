@@ -2,10 +2,10 @@ $(function(){
 	/*************************************** Rock Drum
 		Setting Rock Drum
 	*/
-	var row = '<button class="btn btn-red" id="drumsDel">stop</button>';
+	var row = '<button class="btn btn-red box" id="drumsDel">stop</button>';
 	$.each(drums86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-red" id="drums'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<button class="btn btn-red box" id="drums'+item+'" data="'+value+'">'+item+'</button>';
 	})
 	$('#rockDrumContainer').append(row);
 
