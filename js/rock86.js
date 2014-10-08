@@ -12,30 +12,30 @@ $(function(){
 	/*************************************** Rock Bass
 		Setting Rock Bass
 	*/
-	var row = '<button class="btn btn-blue" id="bassDel">stop</button>';
+	var row = '<button class="btn btn-blue box" id="bassDel">stop</button>';
 	$.each(bass86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-blue" id="bass'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<button class="btn btn-blue box" id="bass'+item+'" data="'+value+'">'+item+'</button>';
 	})
 	$('#rockBassContainer').append(row);
 
 	/*************************************** Rock Lead
 		Setting Rock Lead
 	*/
-	var row = '<button class="btn btn-green" id="leadguitarDel">stop</button>';
+	var row = '<button class="btn btn-green box" id="leadguitarDel">stop</button>';
 	$.each(leadGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-green" id="leadguitar'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<button class="btn btn-green box" id="leadguitar'+item+'" data="'+value+'">'+item+'</button>';
 	})
 	$('#rockLeadContainer').append(row);
 
 	/*************************************** Rock Rhythm
 		Setting Rock Rhythm
 	*/
-	var row = '<button class="btn btn-yellow" id="rhythmguitarDel">stop</button>';
+	var row = '<button class="btn btn-yellow box" id="rhythmguitarDel">stop</button>';
 	$.each(rhythmGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-yellow" id="rhythmguitar'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<button class="btn btn-yellow box" id="rhythmguitar'+item+'" data="'+value+'">'+item+'</button>';
 	})
 	$('#rockRhythmContainer').append(row);
 
