@@ -1,42 +1,52 @@
 .box{
-  background: url(../images/kiss_drum.gif) no-repeat center center fixed; 
-  -webkit-background-size: cover;
+  background-repeat: no-repeat center center fixed;
+
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  -o-background-size: cover;*/
+  background-size: 100% 100%;
 
-
-  /*
   width:40px;
   height:40px;
   border-top:2px solid #fff;
   border-radius:50%;
   margin:10px 5px 10px;
-  background-color:#EEEEEE;
-  background: linear-gradient(#EDEAE1,#CDC8B5);
   text-align:center;
-  box-shadow:
-    0 5px 2px 3px rgba(158, 158, 158, 0.4), 
-    0 3px 5px #B7B6B6, 
-    0 0 0 2px #BBB7AE, 
-    inset 0 -3px 1px 2px rgba(186, 178, 165, 0.5),
-    inset 0 3px 1px 2px rgba(246, 245, 241, 0.3);
+
   cursor:pointer;
   position:relative;
+  /*
   */
 }
+
+.box_drum{
+background: url(../images/kiss_drum.gif); 
+}
+
+.box_bass{
+background: url(../images/kiss_bass.gif); 
+}
+
+.box_lead{
+background: url(../images/kiss_lead.gif); 
+}
+
+.box_rhythm{
+background: url(../images/kiss_rhythm.gif); 
+}
+
 .box:active{
   width:40px;
   height:40px;
 	border-radius:50%;
-  border-top:none;
+  /*border-top:none;*/
   border:2px solid #BAB7AE;
 	background-color:#EEEEEE;
-	text-align:center;
-	position:relative;
+	/*text-align:center;
+	position:relative;*/
 	color:#BAB7AE;
-	font-size:64px;
-	line-height:100px;
+	/*font-size:64px;*/
+	/*line-height:100px;*/
 	text-shadow:
     0 1px 1px white,
     0 1px 1px #BAB7AE;
