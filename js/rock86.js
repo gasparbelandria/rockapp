@@ -2,7 +2,7 @@ $(function(){
 	/*************************************** Rock Drum
 		Setting Rock Drum
 	*/
-	var row = ''; //'<div class="wrap"><button class="btn btn-red box clicker fast" id="drumsDel">stop</button><div class="circle angled second"></div></div>';
+	var row = '';
 	$.each(drums86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<div class="wrap"><button class="btn btn-red box box_drum clicker fast" id="drums'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
@@ -12,7 +12,7 @@ $(function(){
 	/*************************************** Rock Bass
 		Setting Rock Bass
 	*/
-	var row = ''; //<button class="btn btn-blue box" id="bassDel">stop</button>
+	var row = '';
 	$.each(bass86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<div class="wrap"><button class="btn btn-blue box box_bass clicker fast" id="bass'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
@@ -22,7 +22,7 @@ $(function(){
 	/*************************************** Rock Lead
 		Setting Rock Lead
 	*/
-	var row = ''; //<button class="btn btn-green box" id="leadguitarDel">stop</button>
+	var row = '';
 	$.each(leadGuitar86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<div class="wrap"><button class="btn btn-green box box_lead clicker fast" id="leadguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
@@ -32,7 +32,7 @@ $(function(){
 	/*************************************** Rock Rhythm
 		Setting Rock Rhythm
 	*/
-	var row = ''; //<button class="btn btn-yellow box" id="rhythmguitarDel">stop</button>
+	var row = '';
 	$.each(rhythmGuitar86, function( index, value ) {
 		var item = eval(index)+1;
 		row+='<div class="wrap"><button class="btn btn-yellow box box_rhythm clicker fast" id="rhythmguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
@@ -64,66 +64,91 @@ $(function(){
 	});
 
 	$('button[id*="drums"]').live('click', function(){
-		$('button[id*="drums"]').removeClass('btn-red-active');
-		$(this).addClass('btn-red-active');
-		if ($(this).attr('data')!==undefined){
-			window.nowDrumsData=$(this).attr('data');
-			if (window.nowDrums===undefined){
-				window.nowDrums=$(this).attr('id');
-				window.nextDrums=$(this).attr('id');
-				if ( (window.nowBass===undefined) && (window.nowLeadguitar===undefined) && (window.nowRhythmguitar===undefined) ){
-					playDrums();
+		$('button[id*="drums"]').removeClass('clicker_active');
+		if ($(this).hasClass('btn-red-active')){
+			stopDrums();
+		}else{
+			$('button[id*="drums"]').removeClass('btn-red-active');
+			$(this).addClass('clicker_active');
+			$(this).addClass('btn-red-active');
+			if ($(this).attr('data')!==undefined){
+				window.nowDrumsData=$(this).attr('data');
+				if (window.nowDrums===undefined){
+					window.nowDrums=$(this).attr('id');
+					window.nextDrums=$(this).attr('id');
+					if ( (window.nowBass===undefined) && (window.nowLeadguitar===undefined) && (window.nowRhythmguitar===undefined) ){
+						playDrums();
+					}
+				}else{
+					window.nextDrums=$(this).attr('id');
 				}
-			}else{
-				window.nextDrums=$(this).attr('id');
 			}
 		}
+
 	});
 
 	$('button[id*="bass"]').live('click', function(){
-		$('button[id*="bass"]').removeClass('btn-blue-active');
-		$(this).addClass('btn-blue-active');
-		if ($(this).attr('data')!==undefined){
-			if (window.nowBass===undefined){
-				window.nowBass=$(this).attr('id');
-				window.nextBass=$(this).attr('id');
-				if ( (window.nowDrums===undefined) && (window.nowLeadguitar===undefined) && (window.nowRhythmguitar===undefined) ){
-					playBass();
+		$('button[id*="bass"]').removeClass('clicker_active');
+		if ($(this).hasClass('btn-red-active')){
+			stopBass();
+		}else{
+			$('button[id*="bass"]').removeClass('btn-blue-active');
+			$(this).addClass('clicker_active');
+			$(this).addClass('btn-blue-active');
+			if ($(this).attr('data')!==undefined){
+				if (window.nowBass===undefined){
+					window.nowBass=$(this).attr('id');
+					window.nextBass=$(this).attr('id');
+					if ( (window.nowDrums===undefined) && (window.nowLeadguitar===undefined) && (window.nowRhythmguitar===undefined) ){
+						playBass();
+					}
+				}else{
+					window.nextBass=$(this).attr('id');
 				}
-			}else{
-				window.nextBass=$(this).attr('id');
 			}
 		}
 	});
 
 	$('button[id*="leadguitar"]').live('click', function(){
-		$('button[id*="leadguitar"]').removeClass('btn-green-active');
-		$(this).addClass('btn-green-active');		
-		if ($(this).attr('data')!==undefined){
-			if (window.nowLeadguitar===undefined){
-				window.nowLeadguitar=$(this).attr('id');
-				window.nextLeadguitar=$(this).attr('id');
-				if ( (window.nowBass===undefined) && (window.nowDrums===undefined) && (window.nowRhythmguitar===undefined) ){
-					playLeadguitar();
+		$('button[id*="leadguitar"]').removeClass('clicker_active');
+		if ($(this).hasClass('btn-red-active')){
+			stopLeadguitar();
+		}else{
+			$('button[id*="leadguitar"]').removeClass('btn-green-active');
+			$(this).addClass('clicker_active');
+			$(this).addClass('btn-green-active');		
+			if ($(this).attr('data')!==undefined){
+				if (window.nowLeadguitar===undefined){
+					window.nowLeadguitar=$(this).attr('id');
+					window.nextLeadguitar=$(this).attr('id');
+					if ( (window.nowBass===undefined) && (window.nowDrums===undefined) && (window.nowRhythmguitar===undefined) ){
+						playLeadguitar();
+					}
+				}else{
+					window.nextLeadguitar=$(this).attr('id');
 				}
-			}else{
-				window.nextLeadguitar=$(this).attr('id');
 			}
 		}
 	});
 
 	$('button[id*="rhythmguitar"]').live('click', function(){
-		$('button[id*="rhythmguitar"]').removeClass('btn-yellow-active');
-		$(this).addClass('btn-yellow-active');		
-		if ($(this).attr('data')!==undefined){
-			if (window.nowRhythmguitar===undefined){
-				window.nowRhythmguitar=$(this).attr('id');
-				window.nextRhythmguitar=$(this).attr('id');
-				if ( (window.nowBass===undefined) && (window.nowDrums===undefined) && (window.nowLeadguitar===undefined) ){
-					playRhythmguitar();
+		$('button[id*="rhythmguitar"]').removeClass('clicker_active');
+		if ($(this).hasClass('btn-red-active')){
+			stopRhythmguitar();
+		}else{
+			$('button[id*="rhythmguitar"]').removeClass('btn-yellow-active');
+			$(this).addClass('clicker_active');
+			$(this).addClass('btn-yellow-active');		
+			if ($(this).attr('data')!==undefined){
+				if (window.nowRhythmguitar===undefined){
+					window.nowRhythmguitar=$(this).attr('id');
+					window.nextRhythmguitar=$(this).attr('id');
+					if ( (window.nowBass===undefined) && (window.nowDrums===undefined) && (window.nowLeadguitar===undefined) ){
+						playRhythmguitar();
+					}
+				}else{
+					window.nextRhythmguitar=$(this).attr('id');
 				}
-			}else{
-				window.nextRhythmguitar=$(this).attr('id');
 			}
 		}
 
