@@ -19,7 +19,7 @@
     }
 
     var backgroundPositionValue = yTilt + 'px ' + xTilt + "px";
-    console.log(backgroundPositionValue);
+    //console.log(backgroundPositionValue);
     //background.style.backgroundPosition = backgroundPositionValue;
 
     document.body.style.backgroundPosition=backgroundPositionValue;

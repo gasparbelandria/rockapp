@@ -28,11 +28,11 @@
           //$.when.apply(null, deferreds).done(callback);
           $.when.apply(null, deferreds).done(function(){
             $('#main').css('display','block');
-            $('#preload').css('display','none')
+            $('#preload').css('display','none');
+            var w = $('.desc').width();
+            var h = $('.desc').height();
+            var b = Math.floor(eval(w)/10);
           });
-         // console.log(window);
       },
-  };
-
-    
+  }; 
 })();

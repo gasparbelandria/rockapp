@@ -2,40 +2,40 @@ $(function(){
 	/*************************************** Rock Drum
 		Setting Rock Drum
 	*/
-	var row = '<button class="btn btn-red box" id="drumsDel">stop</button>';
+	var row = ''; //'<div class="wrap"><button class="btn btn-red box clicker fast" id="drumsDel">stop</button><div class="circle angled second"></div></div>';
 	$.each(drums86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-red box box_drum" id="drums'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<div class="wrap"><button class="btn btn-red box box_drum clicker fast" id="drums'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockDrumContainer').append(row);
 
 	/*************************************** Rock Bass
 		Setting Rock Bass
 	*/
-	var row = '<button class="btn btn-blue box" id="bassDel">stop</button>';
+	var row = ''; //<button class="btn btn-blue box" id="bassDel">stop</button>
 	$.each(bass86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-blue box box_bass" id="bass'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<div class="wrap"><button class="btn btn-blue box box_bass clicker fast" id="bass'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockBassContainer').append(row);
 
 	/*************************************** Rock Lead
 		Setting Rock Lead
 	*/
-	var row = '<button class="btn btn-green box" id="leadguitarDel">stop</button>';
+	var row = ''; //<button class="btn btn-green box" id="leadguitarDel">stop</button>
 	$.each(leadGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-green box box_lead" id="leadguitar'+item+'" data="'+value+'">-'+item+'-</button>';
+		row+='<div class="wrap"><button class="btn btn-green box box_lead clicker fast" id="leadguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockLeadContainer').append(row);
 
 	/*************************************** Rock Rhythm
 		Setting Rock Rhythm
 	*/
-	var row = '<button class="btn btn-yellow box" id="rhythmguitarDel">stop</button>';
+	var row = ''; //<button class="btn btn-yellow box" id="rhythmguitarDel">stop</button>
 	$.each(rhythmGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<button class="btn btn-yellow box box_rhythm" id="rhythmguitar'+item+'" data="'+value+'">'+item+'</button>';
+		row+='<div class="wrap"><button class="btn btn-yellow box box_rhythm clicker fast" id="rhythmguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockRhythmContainer').append(row);
 
