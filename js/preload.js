@@ -1,4 +1,4 @@
-
+NProgress.start();
 // Preload Howl objects
 
 /*

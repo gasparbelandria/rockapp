@@ -6,6 +6,8 @@
       // Asynchronously load templates located in separate .html files
       loadTemplate: function(sounds, callback) {
           var deferreds = [];
+          var count = 0;
+          var percent = 0;
           $.each(sounds, function(index, sound) {
               var that = this;
               this.sound = sound;
@@ -17,8 +19,12 @@
                         name = name[2];
                         name = name.replace("-", "");
                       window[name] = {data:data};
-                      //console.log(name);
-                      //$('#preload').html(name);
+                      percent = eval(count)/200;
+                      percent.toFixed(1);
+                      console.log(percent);
+                      NProgress.set(percent);
+                      count++;
+                      //$('#mp3s').html(name);
                   }));
               } else {
                   console.log(sound + " not found");
@@ -27,9 +33,10 @@
 
           //$.when.apply(null, deferreds).done(callback);
           $.when.apply(null, deferreds).done(function(){
+            NProgress.done();
+            NProgress.remove();
             $('#main').css('display','block');
             $('#preload').css('display','none');
-
             /**
              * Deleting Top Left buttons not "really really" visibles
              */
@@ -37,7 +44,7 @@
             var topleft_width = $('#topleft').width();
             var topleft_height = $('#topleft').height();
 
-            var wrap = $('.wrap').width();
+            var wrap = $('.wrap').width()+10;
             var top, left;
             $('.drums').each(function(){
               top = $(this).position().top + wrap;
