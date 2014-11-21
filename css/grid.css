@@ -141,12 +141,12 @@ body,
 }
 
 .bottom-left .desc {
-  bottom: 0;
+  top: 0;
   left: 0;
 }
 
 .bottom-right .desc {
-  bottom: 0;
+  top: 0;
   right: 0;
 }
 

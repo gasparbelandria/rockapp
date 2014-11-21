@@ -5,9 +5,10 @@ $(function(){
 	var row = '';
 	$.each(drums86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="wrap"><button class="btn btn-red box box_drum clicker fast" id="drums'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
+		row+='<div class="wrap drums"><button style="border:1px solid red" class="btn btn-red box box_drum clicker fast" id="drums'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockDrumContainer').append(row);
+
 
 	/*************************************** Rock Bass
 		Setting Rock Bass
@@ -15,7 +16,7 @@ $(function(){
 	var row = '';
 	$.each(bass86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="wrap"><button class="btn btn-blue box box_bass clicker fast" id="bass'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
+		row+='<div class="wrap bass"><button class="btn btn-blue box box_bass clicker fast" id="bass'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockBassContainer').append(row);
 
@@ -25,7 +26,7 @@ $(function(){
 	var row = '';
 	$.each(leadGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="wrap"><button class="btn btn-green box box_lead clicker fast" id="leadguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
+		row+='<div class="wrap leadguitar"><button class="btn btn-green box box_lead clicker fast" id="leadguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockLeadContainer').append(row);
 
@@ -35,7 +36,7 @@ $(function(){
 	var row = '';
 	$.each(rhythmGuitar86, function( index, value ) {
 		var item = eval(index)+1;
-		row+='<div class="wrap"><button class="btn btn-yellow box box_rhythm clicker fast" id="rhythmguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
+		row+='<div class="wrap rhythmguitar"><button class="btn btn-yellow box box_rhythm clicker fast" id="rhythmguitar'+item+'" data="'+value+'"></button><div class="circle angled second"></div></div>';
 	})
 	$('#rockRhythmContainer').append(row);
 
@@ -64,13 +65,17 @@ $(function(){
 	});
 
 	$('button[id*="drums"]').live('click', function(){
+		console.log('DRUM');
 		$('button[id*="drums"]').removeClass('clicker_active');
 		if ($(this).hasClass('btn-red-active')){
+			$(this).removeClass('btn-red-active');
+			window.nowDrums=undefined;window.nextDrums=undefined;
 			stopDrums();
 		}else{
 			$('button[id*="drums"]').removeClass('btn-red-active');
 			$(this).addClass('clicker_active');
 			$(this).addClass('btn-red-active');
+			console.log($(this).attr('data'));
 			if ($(this).attr('data')!==undefined){
 				window.nowDrumsData=$(this).attr('data');
 				if (window.nowDrums===undefined){
@@ -89,7 +94,9 @@ $(function(){
 
 	$('button[id*="bass"]').live('click', function(){
 		$('button[id*="bass"]').removeClass('clicker_active');
-		if ($(this).hasClass('btn-red-active')){
+		if ($(this).hasClass('btn-blue-active')){
+			$(this).removeClass('btn-blue-active');
+			window.nowBass=undefined;window.nextBass=undefined;
 			stopBass();
 		}else{
 			$('button[id*="bass"]').removeClass('btn-blue-active');
@@ -111,7 +118,9 @@ $(function(){
 
 	$('button[id*="leadguitar"]').live('click', function(){
 		$('button[id*="leadguitar"]').removeClass('clicker_active');
-		if ($(this).hasClass('btn-red-active')){
+		if ($(this).hasClass('btn-green-active')){
+			$(this).removeClass('btn-green-active');
+			window.nowLeadguitar=undefined;window.nextLeadguitar=undefined;
 			stopLeadguitar();
 		}else{
 			$('button[id*="leadguitar"]').removeClass('btn-green-active');
@@ -133,7 +142,9 @@ $(function(){
 
 	$('button[id*="rhythmguitar"]').live('click', function(){
 		$('button[id*="rhythmguitar"]').removeClass('clicker_active');
-		if ($(this).hasClass('btn-red-active')){
+		if ($(this).hasClass('btn-yellow-active')){
+			$(this).removeClass('btn-yellow-active');
+			window.nowRhythmguitar=undefined;window.nextRhythmguitar=undefined;
 			stopRhythmguitar();
 		}else{
 			$('button[id*="rhythmguitar"]').removeClass('btn-yellow-active');
